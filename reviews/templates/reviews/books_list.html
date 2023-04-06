@@ -19,10 +19,12 @@
           <span class="text-info">Number of reviews: </span>
           <span>{{ item.number_of_reviews }}</span>
           <br>
+
           {% if not item.book_rating %}
             <span class="text-secondary">Provide a rating and write the first review for this book.</span>
             <br>
           {% endif %}
+          
           <a class="btn btn-primary btn-sm active" role="button" href="{% url 'book_detail' item.book.pk %}">Reviews</a></li>
       </li>
     {% endfor %}
